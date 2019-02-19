@@ -46,8 +46,19 @@ def get_company_data():
 	# about_company()
 	soup = get_soup()
 	price = soup.find('h2', attrs={'class': 'current-price'})
-	price_change = soup.find('h2',attrs={'class':'price-change-amount price-pos'})
-	price_percent_change = soup.find('h2',attrs={'class':'price-change-percent price-pos'})
+
+	price_change_pos = soup.find('h2',attrs={'class':'price-change-amount price-pos'})
+	price_change_neg = soup.find('h2',attrs={'class':'price-change-amount price-neg'})
+	price_percent_change_pos = soup.find('h2',attrs={'class':'price-change-percent price-pos'})
+	price_percent_change_neg = soup.find('h2',attrs={'class':'price-change-percent price-neg'})
+
+	if price_change_pos is None:
+		price_change = price_change_neg
+		price_percent_change = price_percent_change_neg
+	else:
+		price_change = price_change_pos
+		price_percent_change = price_percent_change_pos
+	# print(soup)
 	current_price = price.text.strip()
 	current_price_change = price_change.text.strip()
 	current_price_percent_change = price_percent_change.text.strip()
