@@ -7,7 +7,7 @@ Libraries needed to run the jupyter notebook:
   - BeautifulSoup 4 (to scrape websites)
   - NLTK (to summarize news articles)
 
-To run the Nesh_Project.ipynb notebook, download the notebook and the helper_functions.py file. helper_functions contains all the functions that will be used in the jupyter notebook, so download it into the same directory where the Nesh_Project.ipynb notebook was downloaded.
+To run the Nesh_Project.ipynb notebook, download the notebook and the helper_functions.py file. helper_functions contains all the functions that will be used in the jupyter notebook, so download it into the same directory where the Nesh_Project.ipynb notebook was downloaded. I recommend using the Conda distribution for launching the Jupyter notebook, since it comes pre-installed with commonly used Python libraries.
 
 After that, simply follow the directions given in the Jupyter notebook and run each cell as instructed.
 
